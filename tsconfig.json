@@ -1,15 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "rootDirs": ["src"],
-    "baseUrl": "src",
+    "baseUrl": "./",
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "module": "commonjs",
-    "lib": ["es2017", "es7", "es6", "dom"],
-    "declaration": true,
-    "outDir": "dist",
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noStrictGenericChecks": false,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
     "strict": true,
-    "esModuleInterop": true
+    "target": "esnext",
+    "outDir": "dist"
   },
   "exclude": ["node_modules", "dist"]
 }

@@ -25,8 +25,13 @@
   "homepage": "https://github.com/codebayu/style-varian#sreadme",
   "devDependencies": {
     "@types/react": "^18.2.40",
+    "@types/react-native": "^0.73.0",
     "react": "^18.2.0",
     "react-native": "^0.73.7",
-    "typescript": "^5.3.2"
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   }
 }
