@@ -1,36 +1,32 @@
 {
-  "name": "@codebayu/use-hydration-zustand",
-  "version": "1.0.4",
-  "description": "React hook for handle the persist state of zustand",
-  "main": "dist/index.js",
+  "name": "@codebayu/style-variants",
+  "version": "1.0.0",
+  "description": "The Package for creating dynamic and reusable styles in React Native App",
+  "masin": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bayusetiawan45/use-hydration-zustand.git"
+    "url": "git+https://github.com/codebayu/style-variants.git"
   },
   "keywords": [
-    "hydrate",
-    "zustand",
-    "react",
-    "hook",
-    "react hook"
+    "react-native",
+    "style",
+    "svariant",
+    "reusable-component"
   ],
   "author": "bayu setiawan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bayusetiawan45/use-hydration-zustand/issues"
+    "url": "https://github.com/codebayu/style-variants/issues"
   },
-  "homepage": "https://github.com/Bayusetiawan45/use-hydration-zustand#readme",
-  "peerDependencies": {
-    "react": ">=16.8.0"
-  },
+  "homepage": "https://github.com/codebayu/style-varian#sreadme",
   "devDependencies": {
     "@types/react": "^18.2.40",
     "react": "^18.2.0",
-    "typescript": "^5.3.2",
-    "zustand": "^4.4.7"
+    "react-native": "^0.73.7",
+    "typescript": "^5.3.2"
   }
 }

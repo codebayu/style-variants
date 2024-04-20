@@ -1,58 +1,107 @@
-# @codebayu/use-hydration-zustand
+# @codebayu/style-variants
 
-A React Custom Hook for Zustand state management library to simplify hydration handling.
+The Package for creating dynamic and reusable styles in React Native App
 
 ## Installation
 
 ```bash
 # npm
-npm install @codebayu/use-hydration-zustand
+npm install @codebayu/style-variants
 
 # yarn
-yarn add @codebayu/use-hydration-zustand
+yarn add @codebayu/style-variants
 ```
 
 ## Usage
 
 ```tsx
-import { useHydrationZustand } from '@codebayu/use-hydration-zustand';
-import create from 'zustand';
+import { sv } from '@codebayu/style-variants';
 
-// Your Zustand store
-const useStore = create((set) => ({
-  // Your store definition here
-}));
-
-function MyComponent() {
-  // Use the useHydrationZustand hook
-  const isHydrated = useHydrationZustand(useStore);
-
+export default function ReusableButton({
+  children,
+  color,
+  size,
+  style,
+  ...rest
+}) {
+  const buttonStyle = buttonVariant({ color, size });
+  const textStyle = textVariant({ color, size });
   return (
-    <div>
-      {isHydrated ? (
-        items.map((item) => <Card {...item} key={item.id} />)
-      ) : (
-        <Loading />
-      )}
-    </div>
+    <Pressable style={[buttonStyle, style]} {...rest}>
+      <Text style={textStyle}>{children}</Text>
+    </Pressable>
   );
 }
 
-export default MyComponent;
+const textVariant = sv({
+  base: {
+    fontWeight: '600',
+  },
+  variants: {
+    color: {
+      primary: {
+        color: 'green',
+      },
+      secondary: {
+        color: 'blue',
+      },
+      ghost: {
+        color: 'black',
+      },
+    },
+    size: {
+      small: {
+        fontSize: 14,
+      },
+      medium: {
+        fontSize: 16,
+      },
+      large: {
+        fontSize: 18,
+      },
+    },
+  },
+  defaultVariants: {
+    color: 'primary',
+    size: 'medium',
+  },
+});
+
+const buttonVariant = sv({
+  base: {
+    height: 'auto',
+    alignItems: 'center',
+  },
+  variants: {
+    color: {
+      primary: {
+        backgroundColor: '#eee',
+        padding: 17,
+        fontWeight: '600',
+        borderRadius: 5,
+        width: '100%',
+        borderWidth: 1,
+        borderColor: '#eee',
+      },
+      secondary: {
+        backgroundColor: '#e3e3e3',
+        padding: 17,
+        fontWeight: '600',
+        borderRadius: 5,
+        width: '100%',
+        borderWidth: 1,
+        borderColor: '#eee',
+      },
+      ghost: {
+        backgroundColor: 'transparent',
+      },
+    },
+  },
+  defaultVariants: {
+    color: 'primary',
+  },
+});
 ```
-
-## API
-
-`useHydrationZustand(store)`
-A hook for Zustand that simplifies hydration handling.
-
-Parameters
-
-- `store (UseBoundStore<any>)`: The Zustand store.
-
-Returns
-
-- `boolean`: true if the store has finished hydration, false otherwise.
 
 ## License
 
