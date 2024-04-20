@@ -15,6 +15,7 @@ yarn add @codebayu/style-variants
 ## Usage
 
 ```tsx
+// ReusableButton.tsx
 import { sv } from '@codebayu/style-variants';
 
 export default function ReusableButton({
@@ -101,6 +102,11 @@ const buttonVariant = sv({
     color: 'primary',
   },
 });
+
+// Parent Component
+<ReusableButton color="ghost" size="small">
+  Sign Up Here
+</ReusableButton>;
 ```
 
 ## License

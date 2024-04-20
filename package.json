@@ -1,6 +1,6 @@
 {
   "name": "@codebayu/style-variants",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Package for creating dynamic and reusable styles in React Native App",
   "masin": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,7 @@
   "keywords": [
     "react-native",
     "style",
-    "svariant",
+    "variants",
     "reusable-component"
   ],
   "author": "bayu setiawan",
